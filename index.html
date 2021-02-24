@@ -52,9 +52,51 @@
     <section class="container my-md-64">
       <h2 class="text-center mb-32">heading2</h2>
       <div class="row">
-        <article class="col-lg-4">
+        <article class="col-lg-4 mb-48">
           <figure class="border-bottom border-danger">
-            <img src="https://via.placeholder.com/420x320" alt="" />
+            <img
+              class="js-pop-modal pointer--zoom"
+              src="/img/img1.png"
+              alt=""
+            />
+          </figure>
+          <a href="#">
+            <h3 class="h5 my-4">Post title</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            sequi, nisi ratione totam error eos enim quia omnis modi eaque?
+          </p>
+          <div class="mt-24">
+            <a href="#" class="link">read more</a>
+          </div>
+        </article>
+        <article class="col-lg-4 mb-48">
+          <figure class="border-bottom border-danger">
+            <img
+              class="js-pop-modal pointer--zoom"
+              src="/img/img1.png"
+              alt=""
+            />
+          </figure>
+          <a href="#">
+            <h3 class="h5 my-4">Post title</h3>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            sequi, nisi ratione totam error eos enim quia omnis modi eaque?
+          </p>
+          <div class="mt-24">
+            <a href="#" class="link">read more</a>
+          </div>
+        </article>
+        <article class="col-lg-4 mb-48">
+          <figure class="border-bottom border-danger">
+            <img
+              class="js-pop-modal pointer--zoom"
+              src="/img/img1.png"
+              alt=""
+            />
           </figure>
           <a href="#">
             <h3 class="h5 my-4">Post title</h3>
@@ -69,5 +111,43 @@
         </article>
       </div>
     </section>
+
+    <!-- modal for images -->
+    <div
+      class="modal fade"
+      id="popModal"
+      tabindex="-1"
+      aria-labelledby="popModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="popModalLabel">Image title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="" class="js-pop-target w-100" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/master.js"></script>
   </body>
 </html>
