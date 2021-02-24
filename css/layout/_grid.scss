@@ -1,0 +1,41 @@
+.grid {
+  // background-color: rebeccapurple;
+  @supports (grid-area: auto) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    // grid-template-rows: auto;
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    &__item {
+      @include media-breakpoint-up(lg) {
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 2;
+      }
+      img {
+        @include media-breakpoint-up(lg) {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+      &--stack {
+        @include media-breakpoint-up(lg) {
+          grid-column-start: 5;
+          &-top {
+            grid-row: 1;
+          }
+          &-bottom {
+            grid-row: 2;
+          }
+        }
+      }
+      &--end {
+        @include media-breakpoint-up(lg) {
+          grid-column-start: 9;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$spacer: 1rem;
+$spacers: (
+  16: (
+    $spacer,
+  ),
+  24: (
+    $spacer * 1.5,
+  ),
+  32: (
+    $spacer * 2,
+  ),
+  48: (
+    $spacer * 3,
+  ),
+  64: (
+    $spacer * 4,
+  ),
+);
+
+@function theme-color($key) {
+  @return map-get($theme-colors, $key);
+}
+@function col($key) {
+  // @return map-get($theme-colors, $key);
+  @return theme-color($key);
+}
+
+$theme-colors: (
+  "dark": #1a1a1a,
+  "gray": #ccc,
+  "gray-light": #fafafa,
+  "white": #fff,
+  "primary": #214359,
+  "success": #86c0c7,
+  "danger": #ee5454,
+  "warning": #fff200,
+);
+
+$body-bg: theme-color("dark");
+$body-color: theme-color("white");
+$link-color: theme-color("white");
+$border-width: 3px;

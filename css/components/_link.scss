@@ -1,0 +1,9 @@
+.link {
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-bottom: 2px solid col(danger);
+  padding: 0.5rem 0;
+  &:hover {
+    text-decoration: none;
+  }
+}
