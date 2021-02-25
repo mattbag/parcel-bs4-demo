@@ -1,4 +1,4 @@
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min"; // this should be atomized, however single imports do not work with ie11
 import $ from "jquery";
 
 document.addEventListener("DOMContentLoaded", function (event) {

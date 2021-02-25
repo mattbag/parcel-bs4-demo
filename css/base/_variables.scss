@@ -26,13 +26,13 @@ $spacers: (
 }
 
 $theme-colors: (
-  "dark": #1a1a1a,
-  "gray": #ccc,
-  "gray-light": #fafafa,
+  "dark": #0e1414,
+  "gray": #c2c2c2,
+  "gray-light": #f0f0f0,
   "white": #fff,
   "primary": #214359,
   "success": #86c0c7,
-  "danger": #ee5454,
+  "danger": #cf1430,
   "warning": #fff200,
 );
 
@@ -40,3 +40,18 @@ $body-bg: theme-color("dark");
 $body-color: theme-color("white");
 $link-color: theme-color("white");
 $border-width: 3px;
+
+// typography
+$font-weight-normal: 300;
+$font-weight-bold: 600;
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+$h1-font-size: 42px;
+$h2-font-size: 30px;
+$h3-font-size: 26px;
+$h4-font-size: 24px;
+$h5-font-size: 18px;
+$h6-font-size: 1rem;
+
+$line-height-base: 1.8;
+$lead-font-size: 18px;

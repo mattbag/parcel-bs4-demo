@@ -11222,6 +11222,7 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// this should be atomized, however single imports do not work with ie11
 document.addEventListener("DOMContentLoaded", function (event) {
   //   console.log(999);
   utils.initImageModal();
@@ -11273,7 +11274,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49471" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62808" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
