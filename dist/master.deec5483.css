@@ -8183,6 +8183,10 @@ html {
 }
 .pointer--zoom {
   cursor: zoom-in;
+  transition: transform 300ms ease;
+}
+.pointer--zoom:hover {
+  transform: scale(1.1);
 }
 
 @supports (grid-area: auto) {
