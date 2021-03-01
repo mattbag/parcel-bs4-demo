@@ -1,27 +1,32 @@
 .grid {
+  $grid-bp: lg;
   // background-color: rebeccapurple;
   @supports (grid-area: auto) {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
     // grid-template-rows: auto;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up($grid-bp) {
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
     &__item {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up($grid-bp) {
         grid-column: 1 / span 4;
         grid-row: 1 / span 2;
       }
       img {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up($grid-bp) {
           object-fit: cover;
           height: 100%;
         }
       }
       &--stack {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up($grid-bp) {
           grid-column-start: 5;
           &-top {
             grid-row: 1;
@@ -32,7 +37,9 @@
         }
       }
       &--end {
-        @include media-breakpoint-up(lg) {
+        // grid-column: span 2;
+        @include media-breakpoint-up($grid-bp) {
+          // grid-column: span 4;
           grid-column-start: 9;
         }
       }

@@ -8191,6 +8191,11 @@ html {
     gap: 1rem;
     grid-template-columns: 1fr;
   }
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   @media (min-width: 992px) {
     .grid {
       grid-template-columns: repeat(12, 1fr);
@@ -8243,6 +8248,31 @@ html {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.img__hover {
+  position: relative;
+}
+.img__hover:before {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: scale(0.7);
+  transition: transform ease 300ms;
+}
+.img__hover:hover:before {
+  transform: scale(1);
+}
+.img__hover--top {
+  position: relative;
+  transition: transform ease 300ms;
+}
+.img__hover--top:hover {
+  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=/master.deec5483.css.map */
