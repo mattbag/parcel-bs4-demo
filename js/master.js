@@ -3,10 +3,21 @@ import $ from "jquery";
 
 document.addEventListener("DOMContentLoaded", function (event) {
   //   console.log(999);
-  utils.initImageModal();
+  utils.initModule();
 });
 
 var utils = (function (params) {
+  function initModule() {
+    initImageModal();
+    initLinkLog();
+  }
+  function initLinkLog() {
+    $(document).on("click", "a", function (e) {
+      e.preventDefault();
+      console.log(e.target);
+    });
+  }
+
   function initImageModal() {
     var $popModal = $("#popModal");
     if ($popModal) {
@@ -21,6 +32,6 @@ var utils = (function (params) {
   }
 
   return {
-    initImageModal: initImageModal,
+    initModule: initModule,
   };
 })();
